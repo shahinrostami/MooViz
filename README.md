@@ -4,6 +4,8 @@ MooViz stores the objective values produced by Multi-Objective Evolutionary Algo
 
 ![visualising the objective space](fig/760.png)
 
+## Organisation of repoistory
+
 This repository will be re-organised at some point, but for now there is only a single data-set.
 
 **/lambda** folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
