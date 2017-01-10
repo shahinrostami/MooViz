@@ -2,6 +2,8 @@
 
 MooViz stores the objective values produced by Multi-Objective Evolutionary Algorithms. Visualisation is one of the great challenges for Muti-Objective Problems, specially when working with problems consisting of 4 or more objectives.
 
+![visualising the objective space](fig/760.png)
+
 This repository will be re-organised at some point, but for now there is only a single data-set.
 
 **/lambda** folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
