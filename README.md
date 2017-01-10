@@ -39,10 +39,13 @@ The algorithm used to generate these results is CMA-PAES-HAGA. This is a many-ob
 The problem being solved is [DTLZ2](http://people.ee.ethz.ch/%7Esop/download/supplementary/testproblems/dtlz2/index.php)
 
 ```
-@book{deb2005scalable,
-  title={Scalable test problems for evolutionary multiobjective optimization},
+@inproceedings{deb2002scalable,
+  title={Scalable multi-objective optimization test problems},
   author={Deb, Kalyanmoy and Thiele, Lothar and Laumanns, Marco and Zitzler, Eckart},
-  year={2005},
-  publisher={Springer}
+  booktitle={Evolutionary Computation, 2002. CEC'02. Proceedings of the 2002 Congress on},
+  volume={1},
+  pages={825--830},
+  year={2002},
+  organization={IEEE}
 }
 ```
