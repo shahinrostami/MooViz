@@ -4,13 +4,13 @@ MooViz stores the objective values produced by Multi-Objective Evolutionary Algo
 
 This repository will be re-organised at some point, but for now there is only a single data-set.
 
-**lambda** folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
+**/lambda** folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
 
-**mu** folder contains the parent solutions, these are solutions which have survived and will producing the lambda solutions.
+**/mu** folder contains the parent solutions, these are solutions which have survived and will producing the lambda solutions.
 
-**fig** folder contains my own plots of the mu and lambda solutions.
+**/fig** folder contains my own plots of the mu and lambda solutions.
 
-**gif** folder contains my own ffmpeg GIF output of my /fig folder (ffmpeg -i %d.png output.gif). Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
+**/gif** folder contains my own ffmpeg GIF output of my /fig folder (ffmpeg -i %d.png output.gif). Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
 
 Each folder contains output at each iteration of the optimisation process.
 
