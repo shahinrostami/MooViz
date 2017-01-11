@@ -49,3 +49,34 @@ The problem being solved is [DTLZ2](http://people.ee.ethz.ch/%7Esop/download/sup
   organization={IEEE}
 }
 ```
+
+# Auxiliary information
+The CMA-PAES-HAGA algorithm (used to generate these results) maintains additional parameters which describe a solution. Some of this data has also been stored in this repository to enhance your visualisations. E.g., you could make the markers indicating a solution smaller or larger depending on how much of the objective space they dominate explicitly.
+
+**aux/mu_parent_id**
+
+There is a data file for each generation. This requires some explanation of the ordering of the lambda population at each generation:
+- The first 100 solutions are the mu (parent) population selected in the previous generation
+- The second 100 solutions are the offspring population created from the parent population.
+- Eeach solution in the mu population creates an offspring solution.
+- They are in order, such that in the lambda population, the solution at index 0 is the parent for the solution at index 100.
+
+Column 1 of the data indicates which solution was this solutions parent. E.g., if the parent_id is 77, then the solution at index 77 is the parent. This ordering is maintained in all data-sets on this repository.
+
+Column 2 of the data indicates if the solution is a parent. If it is a parent, you should ignore Column 1, as it will state the ID of the solution and not the parent. E.g. if the parent_id is 77, but column 2 is 1, you ignore it. However, if you see two solutions with parent_id, this indicates that both the parent and the offspring made it to the next generation. This can be interesting information. 
+
+**aux/mu_sigma**
+
+There is a data file for each generation. This represents the adapted step-size for every solution in the selected mu population. The higher the sigma, the larger the steps when varying a solution. Higher sigma can indicate confidence in the direction of the evolution of solutions, lower sigma can indicate lower confidence in the direction (or maybe the solutions have converged).
+
+**dominance of solutions**
+
+In the mu population, the order of solutions indicates the explicit hypervolume of the objective space that they dominate. A solution at index 0 covers a greater area compared to the solution at index 1, when you're not considering the area which both of them overlap. This is in respect to a reference point. 
+
+This reference point is dynamically calculated at each generation:
+
+```
+ref = (lambda_pop.max(axis=0) * .1) + lambda_pop.max(axis=0)
+```
+
+where lambda_pop.max(axis=0) returns the largest (worst) value found in each column (objective).
