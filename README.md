@@ -51,6 +51,7 @@ The problem being solved is [DTLZ2](http://people.ee.ethz.ch/%7Esop/download/sup
 ```
 
 # Auxiliary information
+The CMA-PAES-HAGA algorithm (used to generate these results) maintains additional parameters which describe a solution. Some of this data has also been stored in this repository to enhance your visualisations. E.g., you could make the markers indicating a solution smaller or larger depending on how much of the objective space they dominate explicitly.
 
 **aux/mu_parent_id**
 
