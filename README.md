@@ -4,9 +4,9 @@ MooViz (**M**ulti-**o**bjective **o**ptimisation **Viz**ualisations) stores the 
 
 ![visualising the objective space](fig/760.png)
 
-## Organisation of repoistory
+## Organisation of repository
 
-This repository will be re-organised at some point, but for now there is only a single data-set.
+This repository is organised first into the number of dimensions (objectives), then into the problem being solved. The sub-directories are:
 
 **/lambda** folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
 
