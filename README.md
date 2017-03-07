@@ -38,17 +38,16 @@ The algorithm used to generate these results is CMA-PAES-HAGA. This is a many-ob
 ```
 
 
-The problem being solved is [DTLZ2](http://people.ee.ethz.ch/%7Esop/download/supplementary/testproblems/dtlz2/index.php)
+The problem being solved is [WFG9](http://www.wfg.csse.uwa.edu.au/toolkit/)
 
 ```
-@inproceedings{deb2002scalable,
-  title={Scalable multi-objective optimization test problems},
-  author={Deb, Kalyanmoy and Thiele, Lothar and Laumanns, Marco and Zitzler, Eckart},
-  booktitle={Evolutionary Computation, 2002. CEC'02. Proceedings of the 2002 Congress on},
-  volume={1},
-  pages={825--830},
-  year={2002},
-  organization={IEEE}
+@inproceedings{huband2005scalable,
+  title={A scalable multi-objective test problem toolkit},
+  author={Huband, Simon and Barone, Luigi and While, Lyndon and Hingston, Phil},
+  booktitle={International Conference on Evolutionary Multi-Criterion Optimization},
+  pages={280--295},
+  year={2005},
+  organization={Springer}
 }
 ```
 
