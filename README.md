@@ -2,7 +2,7 @@
 
 MooViz (**M**ulti-**o**bjective **o**ptimisation **Viz**ualisations) stores the objective values produced by Multi-Objective Evolutionary Algorithms. Visualisation is one of the great challenges for Muti-Objective Problems, specially when working with problems consisting of 4 or more objectives.
 
-![visualising the objective space](gif/3D_DTLZ2_MooViz.gif)
+![visualising the objective space](https://gfycat.com/AssuredChiefAurochs)
 
 ## Organisation of repository
 
