@@ -14,9 +14,9 @@ This repository is organised first into the number of dimensions (objectives), t
 
 `/mu` folder contains the parent solutions, these are solutions which have survived and will producing the lambda solutions.
 
-`/fig` folder contains my own plots of the mu and lambda solutions.
+`/fig` folder contains my own plots of the mu and lambda solutions. This has been omitted due to file size.
 
-`/gif` folder contains my own ffmpeg GIF output of my /fig folder (ffmpeg -i %d.png output.gif). Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
+`/gif` folder contains my own ffmpeg GIF output of my `/fig` folder `ffmpeg -i %d.png output.gif`. Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
 
 Each folder contains output at each iteration of the optimisation process.
 
@@ -82,3 +82,15 @@ ref = (lambda_pop.max(axis=0) * .1) + lambda_pop.max(axis=0)
 ```
 
 where lambda_pop.max(axis=0) returns the largest (worst) value found in each column (objective).
+
+`auxiliary/pref`
+
+If preference articulation has been used, whether it's *a priori* or *progressive*, the preferences will be stored for each generation.
+
+`auxiliary/mu_var`
+
+The problem variables for each corresponding solution in `mu/` are stored here. The minimum requirement is that the problem variables for the final population is stored.
+
+`auxiliary/max_refs`
+
+This folder stores the current extreme (worst) objective values found at each generation. 
