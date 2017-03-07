@@ -10,13 +10,13 @@ This repository is organised first into the number of dimensions (objectives), t
 
  The sub-directories are:
 
-`**/lambda**` folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
+`/lambda` folder contains the candidate solutions up for consideration at each generation, i.e. they are competing to survive in the next generation and produce offspring.
 
-**/mu** folder contains the parent solutions, these are solutions which have survived and will producing the lambda solutions.
+`/mu` folder contains the parent solutions, these are solutions which have survived and will producing the lambda solutions.
 
-**/fig** folder contains my own plots of the mu and lambda solutions.
+`/fig` folder contains my own plots of the mu and lambda solutions.
 
-**/gif** folder contains my own ffmpeg GIF output of my /fig folder (ffmpeg -i %d.png output.gif). Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
+`/gif` folder contains my own ffmpeg GIF output of my /fig folder (ffmpeg -i %d.png output.gif). Uploaded to [gfycat](https://gfycat.com/EnragedLikelyBarnacle) too.
 
 Each folder contains output at each iteration of the optimisation process.
 
@@ -55,7 +55,7 @@ The problem being solved is [DTLZ2](http://people.ee.ethz.ch/%7Esop/download/sup
 # Auxiliary information
 The CMA-PAES-HAGA algorithm (used to generate these results) maintains additional parameters which describe a solution. Some of this data has also been stored in this repository to enhance your visualisations. E.g., you could make the markers indicating a solution smaller or larger depending on how much of the objective space they dominate explicitly.
 
-**aux/mu_parent_id**
+`auxiliary/mu_parent_id`
 
 There is a data file for each generation. This requires some explanation of the ordering of the lambda population at each generation:
 - The first 100 solutions are the mu (parent) population selected in the previous generation
@@ -67,11 +67,11 @@ Column 1 of the data indicates which solution was this solutions parent. E.g., i
 
 Column 2 of the data indicates if the solution is a parent. If it is a parent, you should ignore Column 1, as it will state the ID of the solution and not the parent. E.g. if the parent_id is 77, but column 2 is 1, you ignore it. However, if you see two solutions with parent_id, this indicates that both the parent and the offspring made it to the next generation. This can be interesting information. 
 
-**aux/mu_sigma**
+`auxiliary/mu_sigma`
 
 There is a data file for each generation. This represents the adapted step-size for every solution in the selected mu population. The higher the sigma, the larger the steps when varying a solution. Higher sigma can indicate confidence in the direction of the evolution of solutions, lower sigma can indicate lower confidence in the direction (or maybe the solutions have converged).
 
-**dominance of solutions**
+`dominance of solutions`
 
 In the mu population, the order of solutions indicates the explicit hypervolume of the objective space that they dominate. A solution at index 0 covers a greater area compared to the solution at index 1, when you're not considering the area which both of them overlap. This is in respect to a reference point. 
 
